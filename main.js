@@ -1,1 +1,1 @@
-console.log(90);
+(()=>{"use strict";(class{static initLoad(){this.createGrid()}static createGrid(){const t=document.querySelector(".content"),e=document.createElement("div");e.classList.add("grid");for(let t=0;t<6;t++){const d=document.createElement("div");for(d.classList.add("row");t<5;t++){const t=document.createElement("div");t.classList.add("cell"),d.appendChild(t)}e.appendChild(d)}t.appendChild(e)}}).initLoad()})();
