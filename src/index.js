@@ -1,3 +1,4 @@
-import UI from '../src/modules/UI.js';
+import './styles.css'
+import controller from './modules/controller.js'
 
-UI.initLoad();
+controller.initLoad();
