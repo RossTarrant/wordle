@@ -11,23 +11,23 @@ export default class controller{
 
     static addKeyboardListener(grid){
         document.addEventListener('keydown', (event) => {
-            console.log(event.key)
             if(this.isLetter(event.key)){
                 this.addLetter(grid, event.key);
             }
             else if(event.key == 'Backspace'){
                 grid.removeLetter();
-                UI.resetGrid();
+                UI.resetGrid(grid.row);
                 UI.displayGrid(grid.getGridData());
             }
             else if (event.key == 'Enter'){
-                if(grid.cell==4){
-                    grid.submitWord();
-                    UI.resetGrid();
+                if(grid.cell==5){
+                    let rowColours = grid.submitWord();
+                    grid.colourData[grid.row-1] = rowColours;
+                    UI.resetGrid(grid.row);
                     UI.displayGrid(grid.getGridData());
+                    UI.addColour(grid.colourData, grid.row - 1);
                 }
                 else{
-                    alert("You can't submit yet!")
                 }
             }
         })
@@ -42,5 +42,4 @@ export default class controller{
     static isLetter(c){
         return c.length === 1 && c.match(/[a-z]/i);
     }
-
 }

@@ -1,6 +1,6 @@
 export default class UI{
 
-    static resetGrid(){
+    static resetGrid(currentRow){
         const content = document.querySelector('.content');
         const grid = document.querySelector('.grid');
         content.removeChild(grid);
@@ -23,5 +23,21 @@ export default class UI{
             grid.appendChild(row);
         }
         content.appendChild(grid);
+    }
+
+    static addColour(colourData, rowID){
+        const grid = document.querySelector('.grid');
+        const rows = document.querySelectorAll('.row');
+        const row = rows[rowID];
+        const cells = row.querySelectorAll('.cell');
+        for(let i = 0; i < 5; i++){
+            const cell = cells[i];
+            if(colourData[rowID][i]==2){
+                cell.setAttribute('id', 'pos')
+            }
+            else if(colourData[rowID][i]==1){
+                cell.setAttribute('id', 'letter')
+            }  
+        }
     }
 }

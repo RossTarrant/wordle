@@ -1,3 +1,11 @@
+body{
+    background-color: black;
+}
+
+h1{
+    color: white;
+}
+
 .grid{
     display: flex;
     flex-direction: column;
@@ -8,10 +16,23 @@
 }
 
 .cell{
+    background-color: rgba(190, 190, 190, 0.829);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
     display: flex;
     border: solid rgb(201, 201, 201) 2px;
     width: 50px;
     height: 50px;
     justify-content: center;
     align-items: center;
+}
+
+#letter{
+    background-color: rgba(240, 188, 46, 0.842);
+}
+
+#pos{
+    background-color: rgb(130, 190, 39);
 }
