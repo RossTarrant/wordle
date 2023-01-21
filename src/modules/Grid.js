@@ -1,17 +1,19 @@
+import words from './data/words.txt'
+
 export default class Grid{
 
     constructor(){
         this.gridData = [[],[],[],[],[]]
-        this.colourData = [[],[],[],[],[]]
+        this.colourData = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]
         this.row = 0;
         this.cell = 0;
         this.word = this.setWord();
     }
 
     setWord(){
-        // List of words
-        let word = "MOUSE"
-        return word;
+        let wordsList = words.split('\n')
+        const word = wordsList[Math.floor(Math.random() * wordsList.length)];
+        return word.toUpperCase();
     }
 
     getGridData(){
@@ -24,6 +26,10 @@ export default class Grid{
 
     getCell(){
         return this.cell;
+    }
+
+    getCurrentWord(){
+        return this.gridData[this.row].join('').toLowerCase()
     }
 
     nextRow(){
