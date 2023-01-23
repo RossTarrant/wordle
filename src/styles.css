@@ -30,12 +30,12 @@ h1{
 
 .cell{
     background-color: rgba(190, 190, 190, 0.829);
-    font-size: 6vw;
+    font-size: 3vh;
     font-weight: bold;
     display: flex;
     border: solid rgb(201, 201, 201) 2px;
-    width: 6vh;
-    height: 6vh;
+    width: 5vh;
+    height: 5vh;
     justify-content: center;
     align-items: center;
 }
@@ -51,14 +51,14 @@ h1{
 .row1, .row2, .row3{
     display: flex;
     align-items: center;
-    gap: 1vh;
+    gap: 0.7vh;
 }
 
 .key-letter, .enter, .backspace{
     color: white;
     background-color: rgba(190, 190, 190, 0.829);
     border: solid rgb(201, 201, 201) 2px;
-    font-size: 1.8vh;
+    font-size: 1.3vh;
     padding: 1vh;
     border-radius: 1vh;
 }
@@ -73,9 +73,9 @@ h1{
 }
 
 .enter, .backspace{
-    width: 5vh;
-    height: 3vh;
-    font-size:1vh;
+    width: 3vh;
+    height: 2vh;
+    font-size:0.8vh;
     display: flex;
     align-items: center;
     justify-content: center;
