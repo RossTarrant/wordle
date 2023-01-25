@@ -114,10 +114,6 @@ export default class controller{
         return currentWord.toUpperCase()==word;
     }
 
-    static updateKeyboardColour(currentWord, word){
-
-    }
-
     static win(grid){
         grid.activeGame = false
         alert('You win!')

@@ -81,14 +81,14 @@ export default class UI{
 
         let keys = keyboard.querySelectorAll('.key-letter');
         for(let i = 0; i < keys.length; i++){
-            if(grid.incorrectLetters.includes(keys[i].textContent)){
-                keys[i].setAttribute('id', 'incorrect')
-            }
-            else if(grid.correctLetters.includes(keys[i].textContent)){
+            if(grid.correctLetters.includes(keys[i].textContent)){
                 keys[i].setAttribute('id', 'pos')
             }
             else if(grid.posLetters.includes(keys[i].textContent)){
                 keys[i].setAttribute('id', 'letter')
+            }
+            else if(grid.incorrectLetters.includes(keys[i].textContent)){
+                keys[i].setAttribute('id', 'incorrect')
             }
         }
 

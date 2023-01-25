@@ -62,6 +62,7 @@ export default class Grid{
     submitWord(){
         let colourData = []
         for(let i = 0; i < 5; i++){
+            this.checkAllOccurancesFound(this.gridData[this.row][i])
             const letter = this.gridData[this.row][i];
             if(this.checkLetter(letter) && this.checkPosition(i)){
                 if(!this.correctLetters.includes(letter)){
@@ -69,7 +70,7 @@ export default class Grid{
                 };
                 colourData.push(2);
             }
-            else if (this.checkLetter(this.gridData[this.row][i])){
+            else if (this.checkLetter(this.gridData[this.row][i]) && this.checkAllOccurancesFound(this.gridData[this.row][i])){
                 if(!this.posLetters.includes(letter)){
                     this.posLetters.push(letter);
                 };
@@ -83,12 +84,26 @@ export default class Grid{
             }
 
         }
-        console.log(this.correctLetters);
-        console.log(this.posLetters);
-        console.log(this.incorrectLetters);
         this.nextRow();
         this.cell = 0;
         return colourData;
+    }
+
+    checkAllOccurancesFound(letter){
+        let allOccurancesFound = false
+        let userOccurances = 0
+        let occurances = 0;
+        for(let i = 0; i < 5; i ++){
+            if(this.gridData[this.row][i]==letter){
+                userOccurances++;
+            }
+        }
+        for(let i = 0; i < 5; i ++){
+            if(this.word[i]==letter){
+                occurances++;
+            }
+        }
+        return occurances==userOccurances;
     }
 
     checkLetter(letter){

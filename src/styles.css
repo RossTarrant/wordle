@@ -25,7 +25,7 @@ h1{
 
 .row{
     display: flex;
-    gap: 0.5vh;
+    gap: 0.8vh;
 }
 
 .cell{
@@ -34,8 +34,8 @@ h1{
     font-weight: bold;
     display: flex;
     border: solid rgb(201, 201, 201) 2px;
-    width: 4vh;
-    height: 4vh;
+    width: 5vh;
+    height: 5vh;
     justify-content: center;
     align-items: center;
 }
@@ -51,7 +51,7 @@ h1{
 .row1, .row2, .row3{
     display: flex;
     align-items: center;
-    gap: 0.4vh;
+    gap: 0.8vh;
 }
 
 .key-letter, .enter, .backspace{
@@ -59,7 +59,7 @@ h1{
     background-color: rgba(190, 190, 190, 0.829);
     border: solid rgb(201, 201, 201) 2px;
     font-size: 1vh;
-    padding: 0.6vh;
+    padding: 1vh;
     border-radius: 0.6vh;
 }
 
