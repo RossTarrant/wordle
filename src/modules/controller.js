@@ -82,9 +82,9 @@ export default class controller{
         else{
             // invalid word animation
         }
-        if(grid.row == 5){
-            grid.activeGame = false
+        if(grid.row === 5){
             this.lose(grid);
+            grid.activeGame = false;
         }
     }
 
@@ -120,6 +120,6 @@ export default class controller{
     }
 
     static lose(grid){
-        alert(`You lose! The word was ${grid.word}`)
+        if(grid.activeGame === true) alert(`You lose! The word was ${grid.word}`)
     }
 }
